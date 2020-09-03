@@ -2,17 +2,14 @@ import { combineReducers } from 'redux';
 import currentVideoReducer from './currentVideo.js';
 import videoListReducer from './videoList.js';
 
-// var rootReducer = (state = { videoList: [], currentVideo: null }, action) => {
-//   return {
-//     videoList: videoListReducer(state.videoList, action),
-//     currentVideo: currentVideoReducer(state.currentVideo, action)
-//   };
-// };
 
+//Centralization of state and state management logic
 var rootReducer = combineReducers({
   videoList: videoListReducer,
   currentVideo: currentVideoReducer
 });
+
+export default rootReducer;
 
 // reducer template has state properties as obj keys
 // const reducer = combineReducers({
@@ -21,7 +18,6 @@ var rootReducer = combineReducers({
 //   c: c
 // })
 
-//Centralization of state and state management logic
 // const rootReducer = Redux.combineReducers({
 //   votes: votesReducer
 // })
@@ -29,4 +25,9 @@ var rootReducer = combineReducers({
 
 // reducer accepts an action from dispatch
 
-export default rootReducer;
+// var rootReducer = (state = { videoList: [], currentVideo: null }, action) => {
+//   return {
+//     videoList: videoListReducer(state.videoList, action),
+//     currentVideo: currentVideoReducer(state.currentVideo, action)
+//   };
+// };
