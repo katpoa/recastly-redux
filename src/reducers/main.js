@@ -1,19 +1,24 @@
 import { combineReducers } from 'redux';
-import currentVideo from './currentVideo.js';
-import videoList from './videoList.js';
+import currentVideoReducer from './currentVideo.js';
+import videoListReducer from './videoList.js';
 
-var rootReducer = () => {};
+var rootReducer = (state = { videoList: [], currentVideo: null }, action) => {
+  return {
+    videoList: videoListReducer(state.videoList, action),
+    currentVideo: currentVideoReducer(state.currentVideo, action)
+  };
+};
 
-//TODO: define the root reducer for this app
+// var rootReducer = combineReducers({
+//   videoListReducer,
+//   currentVideoReducer
+// });
 
-//HINT: you'll need to combine the other two reducers in this
-//  app into a single reducer using the 'combineReducers' method
-//  listed above.
 //Centralization of state and state management logic
-Redux.combineReducers({ //rootReducer and combineReducers are recognized function name keywords
-  currentVideo: currentVideoReducer,
-  videoList: videoListReducer
-})
+// const rootReducer = Redux.combineReducers({
+//   votes: votesReducer
+// })
+// const store = Redux.createStore(rootReducer) //also redux specific
 
 // reducer accepts an action from dispatch
 

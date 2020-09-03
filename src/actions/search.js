@@ -16,22 +16,22 @@ var handleVideoSearch = (q) => {
 
   // pseudo
   // define dispatch operation
-  var dispatchAction = (dispatch) => ({
-    // passed into container which is connected to the component
-    // sends action object to reducer
-    changeList: function(list) {
-      dispatch(changeVideoList(list));
-    }
-  });
+  // var dispatchAction = (dispatch) => ({
+  //   // passed into container which is connected to the component
+  //   // sends action object to reducer
+  //   changeList: function(list) {
+  //     dispatch(changeVideoList(list));
+  //   }
+  // });
 
-  var cb = (items) => {
-    console.log('ran callback after api call', items);
-  };
+  // var cb = (items) => {
+  //   console.log('ran callback after api call', items);
+  // };
 
-  // call search youtube
-  searchYouTube({ q: q, max: 5, key: YOUTUBE_API_KEY }, cb);
+  // // call search youtube
+  // searchYouTube({ q: q, max: 5, key: YOUTUBE_API_KEY }, cb);
 
-  return () => { console.log ('result of handleVideoSearch was called'); };
+  // return () => { console.log ('result of handleVideoSearch was called'); };
 
   // dispatches action creator for change list with video list as param
 
