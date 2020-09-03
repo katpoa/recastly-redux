@@ -13,3 +13,5 @@ var currentVideoReducer = (state = null, action) => {
 };
 
 export default currentVideoReducer;
+
+// Error: Given action "CHANGE_VIDEO_LIST", reducer "currentVideo" returned undefined. To ignore an action, you must explicitly return the previous state. If you want this reducer to hold no value, you can return null instead of undefined.
