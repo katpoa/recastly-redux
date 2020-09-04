@@ -29,7 +29,7 @@ var App = () => {
   <div>
     <nav className="navbar">
       <div className="col-md-6 col-md-offset-3">
-        <SearchContainer/>
+        <SearchContainer />
       </div>
     </nav>
     <div className="row">
@@ -37,8 +37,7 @@ var App = () => {
         <VideoPlayerContainer />
       </div>
       <div className="col-md-5">
-        <VideoListContainer
-        />
+        <VideoListContainer />
       </div>
     </div>
   </div>;
